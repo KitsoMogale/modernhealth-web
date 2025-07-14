@@ -1,0 +1,83 @@
+/* index.css — global styles and resets */
+
+:root {
+  --font-primary: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-primary: #2563eb; /* blue-600 */
+  --color-secondary: #4f46e5; /* indigo-600 */
+  --color-light: #ffffff;
+  --color-dark: #1a1a1a;
+  --color-gray: #f3f4f6;
+  --text-main: #213547;
+  --text-secondary: #4b5563;
+
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light;
+  color: var(--text-main);
+  background-color: var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-light);
+  color: var(--text-main);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1749db;
+}
+
+button {
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
