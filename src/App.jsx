@@ -49,7 +49,7 @@ function App() {
         <p>
           Track nutrition, get personalized recipes, and monitor fitness with smart AI insights.
         </p>
-        <a href="#download">Download Now</a>
+        <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view">Download APK</a>
       </header>
 
       <section className="features">
@@ -94,7 +94,7 @@ function App() {
         <p>
           Join thousands of users who are eating smarter, cooking healthier, and staying active.
         </p>
-        <a href="#download" id="download">Get Started</a>
+        <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" id="download">Get Started</a>
       </section>
 
       <footer>
