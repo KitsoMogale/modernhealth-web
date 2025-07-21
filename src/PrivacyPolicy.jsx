@@ -8,22 +8,18 @@ const privacyPolicyContent = `
 
 **Last Updated: July 21, 2025**
 
-ModernHealth ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the ModernHealth mobile application ("App"). The App provides educational content about nutrition and the human body, along with subscription-based features to enhance your health journey. By using the App, you agree to the practices described in this policy.
+ModernHealth ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the ModernHealth mobile application ("App"). The App provides educational content about nutrition and the human body, along with subscription-based features to enhance your health journey( e.g nutrition tracking and meal recommendations). By using the App, you agree to the practices described in this policy.
 
 ## 1. Information We Collect
 
 We collect the following types of information to provide and improve our services:
 
 ### a. Information You Provide
-- **Account Information**: When you create a profile or subscribe, we collect your email address and subscription status (e.g., whether you have an active subscription). This is stored locally on your device using AsyncStorage and used for account management and payment processing.
+- **Account Information**: When you create a profile or subscribe, we collect your email address and subscription status (e.g., whether you have an active subscription). This is stored in our database and used for account management and payment processing.
 - **Payment Information**: If you choose to subscribe (e.g., for $6/month), we collect payment details through our third-party payment processor (PayPal). We do not store your credit card or payment information directly on our servers.
 
-### b. Automatically Collected Information
-- **Usage Data**: We may collect non-personal information about how you interact with the App, such as which educational sections (e.g., Nutrition Education, Human Body Education) you view, how long you spend on each section, and navigation patterns. This helps us improve the App’s functionality and content.
-- **Device Information**: We may collect device-specific information, such as your device type, operating system, and unique device identifiers, to ensure compatibility and optimize performance.
-
-### c. Information Not Collected
-- The App does not collect sensitive personal information like your name, address, or health data unless explicitly provided by you (e.g., email for subscriptions).
+### b. Information Not Collected
+- The App does not collect sensitive personal information like your address, or health data unless explicitly provided by you (e.g., email for subscriptions).
 - Educational screens (e.g., Nutrition Education, Human Body Education) do not collect personal data beyond usage analytics.
 
 ## 2. How We Use Your Information
@@ -55,7 +51,7 @@ We only share your information as necessary to provide our services or comply wi
 
 You have control over your information:
 - **Access and Update**: You can view or update your health goals, current metrics(e.g age, weight) and subscription status in the App’s profile settings.
-- **Data Deletion**: To delete your account data, contact us at support@modernhealth.com. We will remove your email and subscription data from our systems, except where required by law.
+- **Data Deletion**: To delete your account data, visit our website at [Account Deletion](https://modernhealth-web.netlify.app). We will remove your email and subscription data from our systems, except where required by law.
 - **Subscription Cancellation**: The app does not automatically have automatically recurring subscription payments.
 
 ## 6. Children’s Privacy
@@ -90,7 +86,7 @@ function PrivacyPolicy() {
         <article>
           <ReactMarkdown>{privacyPolicyContent}</ReactMarkdown>
         </article>
-        <Link to="/" className="back-button">Back to Home</Link>
+        <Link to="/" className="back-button">Back</Link>
       </div>
     </main>
   );

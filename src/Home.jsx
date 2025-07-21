@@ -50,8 +50,8 @@ function Home() {
     <main>
       <header className="hero">
         <div className="hero-content">
-            <h1 style={{color:'rgb(243, 240, 236)'}}>ModernHealth</h1>
-          <h2>You Are What You Eat</h2>
+            <h1 style={{color:'rgb(243, 240, 236)', fontSize: 35}}>ModernHealth</h1>
+          <h2 style={{marginTop:30}}>You Are What You Eat</h2>
           <p>
             Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.
           </p>
@@ -65,14 +65,14 @@ function Home() {
         <h2>Master Your Nutrition</h2>
         <div className="feature-grid">
           <div className="feature-card">
-            <i className="fas fa-utensils"></i>
-            <h3>AI Nutrition Tracking</h3>
-            <p>Log meals or snap photos to track calories and nutrients, seeing how they fuel your body.</p>
-          </div>
-          <div className="feature-card">
             <i className="fas fa-heart"></i>
             <h3>Diet-Body Connection</h3>
             <p>Explore how food impacts your cells, tissues, and organs with engaging lessons.</p>
+          </div>
+          <div className="feature-card">
+            <i className="fas fa-utensils"></i>
+            <h3>AI Nutrition Tracking</h3>
+            <p>Log meals or snap photos to track calories and nutrients, seeing how they fuel your body.</p>
           </div>
           <div className="feature-card">
             <i className="fas fa-carrot"></i>
