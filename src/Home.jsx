@@ -107,6 +107,9 @@ function Home() {
                 ))}
               </div>
               <div className="phone-notch"></div>
+              <div className="power-button"></div>
+              <div className="volume-up-button"></div>
+              <div className="volume-down-button"></div>
             </div>
           </div>
           <div className="slideshow-controls">
