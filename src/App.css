@@ -181,13 +181,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 700px;
+  max-width: 100%; /* Prevent container from exceeding viewport */
   margin: 0 auto;
+  overflow: hidden; /* Ensure no overflow from children */
 }
 
 .slideshow {
   width: 100%;
-  max-width: 360px; /* Typical phone width */
+  max-width: 380px; /* Typical phone width */
   aspect-ratio: 9 / 16;
   position: relative;
   margin: 0 auto;
@@ -240,20 +241,21 @@ body {
 .slideshow-controls {
   display: flex;
   justify-content: space-between;
-  width: calc(100% + 6rem);
+  width: 100%; /* Fit within parent container */
+  max-width: 380px; /* Match slideshow width */
   margin-top: 1rem;
+  padding: 0 0.5rem; /* Reduced padding to stay within viewport */
 }
 
 .slideshow-controls button {
   background: rgba(33, 33, 33, 0.7);
   color: #FFFFFF;
   border: none;
-  padding: 1rem;
+  padding: 0.8rem; /* Slightly reduced padding */
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Slightly smaller font size */
   transition: background 0.2s ease;
-  margin: 0 2rem;
 }
 
 .slideshow-controls button:hover {
@@ -571,10 +573,14 @@ footer {
   }
 
   .slideshow-container {
-    max-width: 600px;
+    max-width: 100%;
   }
 
   .slideshow {
+    max-width: 320px;
+  }
+
+  .slideshow-controls {
     max-width: 320px;
   }
 
@@ -636,7 +642,7 @@ footer {
   }
 
   .slideshow-container {
-    max-width: 500px;
+    max-width: 100%;
   }
 
   .slideshow {
@@ -654,14 +660,14 @@ footer {
   }
 
   .slideshow-controls {
-    width: calc(100% + 3rem);
+    max-width: 280px;
     margin-top: 0.8rem;
+    padding: 0 0.5rem;
   }
 
   .slideshow-controls button {
     padding: 0.6rem;
     font-size: 1.2rem;
-    margin: 0 1rem;
   }
 
   .slideshow-dots {
@@ -760,7 +766,7 @@ footer {
   }
 
   .slideshow-container {
-    max-width: 400px;
+    max-width: 100%;
   }
 
   .slideshow {
@@ -777,10 +783,15 @@ footer {
     height: 16px;
   }
 
+  .slideshow-controls {
+    max-width: 240px;
+    padding: 0 0.5rem;
+    margin-top: 0.6rem;
+  }
+
   .slideshow-controls button {
     padding: 0.5rem;
     font-size: 0.9rem;
-    margin: 0 0.5rem;
   }
 
   .slideshow-dots {
