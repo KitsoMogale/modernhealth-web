@@ -3,12 +3,15 @@ import './App.css';
 
 function Home() {
   const screenshots = [
+    '/Screenshot7.jpg',
     '/Screenshot1.jpg',
     '/Screenshot2.jpg',
     '/Screenshot3.jpg',
     '/Screenshot4.jpg',
     '/Screenshot5.jpg',
     '/Screenshot6.jpg',
+    '/Screenshot8.jpg',
+    '/Screenshot9.jpg'
   ];
 
   const [current, setCurrent] = useState(0);
