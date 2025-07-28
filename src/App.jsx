@@ -29,7 +29,7 @@ function App() {
           </div>
           <div className="social-icons">
             <a href="https://twitter.com/modernhealth" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/modernhealth" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/modernhealth2025" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
           </div>
         </footer>
         <DeleteAccountModal isOpen={isModalOpen} onClose={closeModal} />

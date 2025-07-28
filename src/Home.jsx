@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % screenshots.length);
-    }, 5000);
+    }, 9000);
     return () => clearInterval(timer);
   }, [screenshots.length]);
 
@@ -48,14 +48,15 @@ function Home() {
 
   return (
     <main>
-      <header className="hero">
+      <header className="hero" aria-label="ModernHealth introduction">
+        <div className="hero-overlay"></div>
         <div className="hero-content">
-            <h1 style={{color:'rgb(243, 240, 236)', fontSize: 35}}>ModernHealth</h1>
-          <h2 style={{marginTop:30}}>You Are What You Eat</h2>
-          <p>
+          <h1 className="hero-title">ModernHealth</h1>
+          <h2 className="hero-subtitle">You Are What You Eat</h2>
+          <p className="hero-description">
             Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.
           </p>
-          <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" className="cta-button">
+          <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" className="cta-button" aria-label="Download ModernHealth app">
             Download Now
           </a>
         </div>

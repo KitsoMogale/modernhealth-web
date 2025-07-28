@@ -23,51 +23,88 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #2E7D32, #A5D6A7);
+  background: linear-gradient(135deg, #2E7D32 0%, #A5D6A7 100%);
   color: #FFFFFF;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* Subtle overlay for contrast */
+  z-index: 1;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  animation: fadeIn 1s ease-in;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-.hero h1 {
-  font-size: 4rem;
+.hero-title {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 4rem;
-  position: absolute;
-  z-index: 1;
-  top: 2%;
-  left: 1%;
+  color: #F3F0EC;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-inline: auto;
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #E0F7FA;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #F5F5F5;
+  line-height: 1.8;
 }
 
 .cta-button {
   background: #1976D2;
   color: #FFFFFF;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 3rem;
   border-radius: 12px;
   font-weight: 600;
+  font-size: 1.2rem;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
   display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
   background: #0D47A1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Glassmorphism effect for hero-content on larger screens */
+@media screen and (min-width: 768px) {
+  .hero-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 /* Features Section */
@@ -210,7 +247,7 @@ body {
   background: #E0E0E0;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background0.3s ease;
 }
 
 .slideshow-dots .dot.active {
@@ -492,13 +529,18 @@ footer {
 @media screen and (max-width: 1024px) {
   .hero {
     padding: 4rem 1rem;
+    min-height: 400px;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .hero-title {
+    font-size: 2.8rem;
   }
 
-  .hero p {
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
     font-size: 1.1rem;
   }
 
@@ -522,14 +564,24 @@ footer {
 @media screen and (max-width: 768px) {
   .hero {
     padding: 3rem 1rem;
+    min-height: 350px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
+  .hero-title {
+    font-size: 2.2rem;
   }
 
-  .hero p {
+  .hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 2rem;
     font-size: 1rem;
   }
 
@@ -576,11 +628,6 @@ footer {
     font-size: 1rem;
   }
 
-  .cta .cta-button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-  }
-
   .privacy-policy {
     padding: 3rem 1rem;
   }
@@ -621,11 +668,26 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.5rem;
+  .hero {
+    padding: 2.5rem 1rem;
+    min-height: 300px;
   }
 
-  .hero p {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.8rem;
     font-size: 0.9rem;
   }
 
@@ -656,11 +718,6 @@ footer {
   }
 
   .cta p {
-    font-size: 0.9rem;
-  }
-
-  .cta .cta-button {
-    padding: 0.7rem 1.8rem;
     font-size: 0.9rem;
   }
 
