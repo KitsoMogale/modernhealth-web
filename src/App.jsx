@@ -22,13 +22,13 @@ function App() {
           <p>© 2025 ModernHealth. All rights reserved.</p>
           <div className="footer-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
-            <a href="mailto:support@modernhealth.com">Contact Us</a>
+            <a href="mailto:modernhealth84@gmail.com">Contact Us</a>
             <button onClick={openModal} className="footer-link-button" aria-label="Delete Account">
               Delete Account
             </button>
           </div>
           <div className="social-icons">
-            <a href="https://twitter.com/modernhealth" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+            <a href="https://x.com/modernhealth25" aria-label="X (formerly Twitter)"><i className="fab fa-x-twitter"></i></a>
             <a href="https://instagram.com/modernhealth2025" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
           </div>
         </footer>
