@@ -57,7 +57,7 @@ function Home() {
             Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.
           </p>
           <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" className="cta-button" aria-label="Download ModernHealth app">
-            Download Now
+            Download
           </a>
         </div>
       </header>
@@ -85,19 +85,27 @@ function Home() {
 
       <section className="slideshow-section">
         <h2>See ModernHealth in Action</h2>
-        <div
-          className="slideshow"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {screenshots.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`ModernHealth screenshot ${index + 1}`}
-              className={index === current ? 'active' : ''}
-            />
-          ))}
+        <div className="slideshow-container">
+          <div
+            className="slideshow"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            aria-label="ModernHealth app screenshots slideshow"
+          >
+            <div className="phone-frame">
+              <div className="phone-screen">
+                {screenshots.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`ModernHealth screenshot ${index + 1}`}
+                    className={index === current ? 'active' : ''}
+                  />
+                ))}
+              </div>
+              <div className="phone-notch"></div>
+            </div>
+          </div>
           <div className="slideshow-controls">
             <button onClick={prevSlide} aria-label="Previous screenshot">❮</button>
             <button onClick={nextSlide} aria-label="Next screenshot">❯</button>

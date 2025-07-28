@@ -23,7 +23,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #2E7D32 0%, #A5D6A7 100%);
+  background: linear-gradient(135deg, #0e7c45 0%, #7faf93 100%);
   color: #FFFFFF;
   text-align: center;
   padding: 6rem 1rem;
@@ -41,7 +41,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2); /* Subtle overlay for contrast */
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -56,7 +56,7 @@ body {
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #F3F0EC;
+  color: #f1ece5;
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -176,44 +176,71 @@ body {
   font-weight: 600;
 }
 
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .slideshow {
   width: 100%;
-  max-width: 600px;
+  max-width: 360px; /* Typical phone width */
   aspect-ratio: 9 / 16;
-  margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #F5F5F5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
-.slideshow img {
+.phone-frame {
+  background: #1a1a1a; /* Dark phone body */
+  border-radius: 40px; /* Rounded corners for phone */
+  padding: 12px; /* Bezel */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.1);
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-  border-radius: 12px;
-  padding-top: 20px;
-  padding-bottom: 28px;
 }
 
-.slideshow img.active {
+.phone-screen {
+  background: #000; /* Screen background */
+  border-radius: 28px; /* Slightly smaller radius for screen */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Changed to cover for better fit */
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.phone-screen img.active {
   display: block;
   opacity: 1;
-  border-radius: 60px;
-  width: 100%;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  z-index: 10;
 }
 
 .slideshow-controls {
-  position: absolute;
-  top: 50%;
-  width: calc(100% + 5rem);
   display: flex;
   justify-content: space-between;
-  transform: translateY(-50%);
-  z-index: 10;
+  width: calc(100% + 6rem);
+  margin-top: 1rem;
 }
 
 .slideshow-controls button {
@@ -233,12 +260,10 @@ body {
 }
 
 .slideshow-dots {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .slideshow-dots .dot {
@@ -247,7 +272,7 @@ body {
   background: #E0E0E0;
   border-radius: 50%;
   cursor: pointer;
-  transition: background0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .slideshow-dots .dot.active {
@@ -256,7 +281,7 @@ body {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(to right, #1976D2, #BBDEFB);
+  background: linear-gradient(to right, #0e7c45, #7faf93);
   color: #FFFFFF;
   padding: 5rem 1rem;
   text-align: center;
@@ -468,7 +493,7 @@ body {
 
 /* Footer */
 footer {
-  background: #212121;
+  background: #020202;
   color: #FFFFFF;
   text-align: center;
   padding: 2rem 1rem;
@@ -544,6 +569,14 @@ footer {
     font-size: 1.1rem;
   }
 
+  .slideshow-container {
+    max-width: 600px;
+  }
+
+  .slideshow {
+    max-width: 320px;
+  }
+
   .feature-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -601,19 +634,37 @@ footer {
     padding: 1.5rem;
   }
 
+  .slideshow-container {
+    max-width: 500px;
+  }
+
   .slideshow {
-    max-width: 90%;
-    max-height: 500px;
+    max-width: 280px;
+  }
+
+  .phone-frame {
+    padding: 10px;
+    border-radius: 36px;
+  }
+
+  .phone-notch {
+    width: 100px;
+    height: 18px;
   }
 
   .slideshow-controls {
     width: calc(100% + 3rem);
+    margin-top: 0.8rem;
   }
 
   .slideshow-controls button {
     padding: 0.6rem;
     font-size: 1.2rem;
     margin: 0 1rem;
+  }
+
+  .slideshow-dots {
+    margin-top: 0.8rem;
   }
 
   .cta {
@@ -707,10 +758,32 @@ footer {
     font-size: 1.5rem;
   }
 
+  .slideshow-container {
+    max-width: 400px;
+  }
+
+  .slideshow {
+    max-width: 240px;
+  }
+
+  .phone-frame {
+    padding: 8px;
+    border-radius: 32px;
+  }
+
+  .phone-notch {
+    width: 80px;
+    height: 16px;
+  }
+
   .slideshow-controls button {
     padding: 0.5rem;
     font-size: 0.9rem;
     margin: 0 0.5rem;
+  }
+
+  .slideshow-dots {
+    margin-top: 0.6rem;
   }
 
   .cta h2 {
