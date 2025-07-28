@@ -188,7 +188,8 @@ body {
 
 .slideshow {
   width: 100%;
-  max-width: 380px; /* Typical phone width */
+  max-width: 300px; /* Typical phone width */
+  max-height: 800;
   aspect-ratio: 9 / 16;
   position: relative;
   margin: 0 auto;
