@@ -243,11 +243,11 @@ body {
 
 .power-button {
   position: absolute;
-  right: -0.4%; /* Slightly more offset for realism */
+  right: -0.3vw; /* Slightly more offset for realism */
   top: 35%; /* Centered vertically */
   width: 0.9vw;
   max-width: 5px;
-  height: calc(80vh / 14);
+  height: calc(85vh / 14);
   max-height: 60px;
   background: linear-gradient(145deg, #2a2a2a, #0f0f0f); /* Metallic effect */
   border: 1.5px solid #444;
@@ -264,12 +264,12 @@ body {
 
 .volume-up-button {
   position: absolute;
-  left: -0.9vw;
+  left: -0.3vw;
   top: 15%; /* Higher for modern design */
   width: 0.9vw;
   max-width: 5px;
-  height: calc(80vh / 18);
-  max-height: 45px;
+  height: calc(90vh / 18);
+  max-height: 55px;
   background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
   border: 1.5px solid #444;
   border-radius: 3px;
@@ -286,11 +286,11 @@ body {
 .volume-down-button {
   position: absolute;
   left: -0.3vw;
-  top: calc(15% + (80vh / 16));
+  top: calc(16% + (80vh / 16));
   width: 0.9vw;
   max-width: 5px;
-  height: calc(80vh / 18);
-  max-height: 45px;
+  height: calc(85vh / 18);
+  max-height: 55px;
   background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
   border: 1.5px solid #444;
   border-radius: 3px;
