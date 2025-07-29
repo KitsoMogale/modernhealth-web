@@ -1,4 +1,3 @@
-
 /* Reset */
 * {
   margin: 0;
@@ -174,7 +173,7 @@ body {
 .slideshow-section h2 {
   font-size: 2rem;
   color: #2E7D32;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-weight: 600;
 }
 
@@ -182,33 +181,33 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%; /* Prevent container from exceeding viewport */
+  max-width: 100%;
   margin: 0 auto;
-  overflow: hidden; /* Ensure no overflow from children */
+  overflow: hidden;
 }
 
 .slideshow {
-  width: 100%;
-  max-width: 300px; /* Typical phone width */
-  max-height: 800px;
-  aspect-ratio: 9 / 16;
+  width: calc(80vh / 2.1667); /* 19.5:9 aspect ratio */
+  height: 80vh; /* Full height minus padding */
+  max-width: 450px; /* Cap for large screens */
+  max-height: 900px; /* Cap for very tall screens */
   position: relative;
   margin: 0 auto;
 }
 
 .phone-frame {
-  background: #1a1a1a; /* Dark phone body */
-  border-radius: 40px; /* Rounded corners for phone */
-  padding: 12px; /* Bezel */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.1);
+  background: #1a1a1a;
+  border-radius: 48px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 5px rgba(255, 255, 255, 0.1);
   position: relative;
   width: 100%;
   height: 100%;
 }
 
 .phone-screen {
-  background: #000; /* Screen background */
-  border-radius: 28px; /* Slightly smaller radius for screen */
+  background: #000;
+  border-radius: 34px;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -218,7 +217,7 @@ body {
 .phone-screen img {
   width: 100%;
   height: 100%;
-  object-fit: fill; /* Changed to cover for better fit */
+  object-fit: cover;
   display: none;
   transition: opacity 0.5s ease-in-out;
 }
@@ -230,72 +229,98 @@ body {
 
 .phone-notch {
   position: absolute;
-  top: 9px;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 20px;
+  width: calc(80vh / 6.5);
+  max-width: 140px;
+  height: calc(80vh / 35);
+  max-height: 24px;
   background: #1a1a1a;
-  border-radius: 10px;
+  border-radius: 12px;
   z-index: 10;
 }
 
 .power-button {
   position: absolute;
-  right: -3px; /* Slightly outside the frame for realism */
-  top: 30%; /* Positioned slightly above center */
-  width: 3px;
-  height: 40px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 2px;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+  right: -0.4%; /* Slightly more offset for realism */
+  top: 35%; /* Centered vertically */
+  width: 0.9vw;
+  max-width: 5px;
+  height: calc(80vh / 14);
+  max-height: 60px;
+  background: linear-gradient(145deg, #2a2a2a, #0f0f0f); /* Metallic effect */
+  border: 1.5px solid #444;
+  border-radius: 3px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.1);
   z-index: 5;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.power-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
 }
 
 .volume-up-button {
   position: absolute;
-  left: -3px; /* Slightly outside the frame for realism */
-  top: 20%; /* Positioned above the power button */
-  width: 4px;
-  height: 40px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 2px;
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
+  left: -0.9vw;
+  top: 15%; /* Higher for modern design */
+  width: 0.9vw;
+  max-width: 5px;
+  height: calc(80vh / 18);
+  max-height: 45px;
+  background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
+  border: 1.5px solid #444;
+  border-radius: 3px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.1);
   z-index: 5;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.volume-up-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
 }
 
 .volume-down-button {
   position: absolute;
-  left: -3px; /* Slightly outside the frame for realism */
-  top: calc(20% + 49px); /* Below volume-up with small gap */
-  width: 3px;
-  height: 40px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 2px;
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
+  left: -0.3vw;
+  top: calc(15% + (80vh / 16));
+  width: 0.9vw;
+  max-width: 5px;
+  height: calc(80vh / 18);
+  max-height: 45px;
+  background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
+  border: 1.5px solid #444;
+  border-radius: 3px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.1);
   z-index: 5;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.volume-down-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
 }
 
 .slideshow-controls {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Fit within parent container */
-  max-width: 380px; /* Match slideshow width */
-  margin-top: 1rem;
-  padding: 0 0.5rem; /* Reduced padding to stay within viewport */
+  width: 100%;
+  max-width: calc((80vh / 2.1667) + 80px);
+  margin-top: 3rem; /* Increased to avoid overlap */
+  padding: 0 0.5rem;
 }
 
 .slideshow-controls button {
   background: rgba(33, 33, 33, 0.7);
   color: #FFFFFF;
   border: none;
-  padding: 0.8rem; /* Slightly reduced padding */
+  padding: 0.9rem;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.2rem; /* Slightly smaller font size */
+  font-size: 1.3rem;
   transition: background 0.2s ease;
 }
 
@@ -306,13 +331,13 @@ body {
 .slideshow-dots {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
 .slideshow-dots .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #E0E0E0;
   border-radius: 50%;
   cursor: pointer;
@@ -618,36 +643,72 @@ footer {
   }
 
   .slideshow {
-    max-width: 320px;
+    width: calc(80vh / 2.1667);
+    height: 80vh;
+    max-width: 420px;
+    max-height: 800px;
   }
 
-  .slideshow-controls {
-    max-width: 320px;
+  .phone-frame {
+    padding: 12px;
+    border-radius: 42px;
+  }
+
+  .phone-screen {
+    border-radius: 30px;
   }
 
   .phone-notch {
-    width: 100px;
-    height: 18px;
+    width: calc(80vh / 6.5);
+    max-width: 130px;
+    height: calc(80vh / 35);
+    max-height: 22px;
+    top: 11px;
   }
 
   .power-button {
-    right: -3px;
-    width: 3px;
-    height: 45px;
+    right: -0.3vw;
+    width: 0.8vw;
+    max-width: 4px;
+    height: calc(85vh / 14);
+    max-height: 55px;
   }
 
   .volume-up-button {
-    left: -3px;
-    top: 20%;
-    width: 3px;
-    height: 45px;
+    left: -0.3vw;
+    width: 0.8vw;
+    max-width: 4px;
+    height: calc(85vh / 18);
+    max-height: 40px;
   }
 
   .volume-down-button {
-    left: -3px;
-    top: calc(20% + 49px);
-    width: 3px;
-    height: 45px;
+    left: -0.3vw;
+    top: calc(15% + (85vh / 16));
+    width: 0.8vw;
+    max-width: 4px;
+    height: calc(85vh / 18);
+    max-height: 40px;
+  }
+
+  .slideshow-controls {
+    max-width: calc((80vh / 2.1667) + 70px);
+    margin-top: 2.8rem;
+  }
+
+  .slideshow-controls button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .slideshow-dots {
+    margin-top: 1.3rem;
+    gap: 0.5rem;
+  }
+
+  .slideshow-dots .dot {
+    width: 11px;
+    height: 11px;
   }
 
   .feature-grid {
@@ -712,52 +773,73 @@ footer {
   }
 
   .slideshow {
-    max-width: 280px;
+    width: calc(75vh / 2.1667);
+    height: 75vh;
+    max-width: 320px;
+    max-height: 600px;
   }
 
   .phone-frame {
     padding: 10px;
-    border-radius: 36px;
+    border-radius: 40px;
+  }
+
+  .phone-screen {
+    border-radius: 30px;
   }
 
   .phone-notch {
-    width: 90px;
-    height: 16px;
+    width: calc(75vh / 6.5);
+    max-width: 120px;
+    height: calc(75vh / 35);
+    max-height: 20px;
+    top: 10px;
   }
 
   .power-button {
-    right: -2px;
-    width: 2px;
-    height: 39px;
+    right: -0.7vw;
+    width: 0.7vw;
+    max-width: 4px;
+    height: calc(78vh / 14);
+    max-height: 60px;
   }
 
   .volume-up-button {
-    left: -2px;
-    top: 20%;
-    width: 2px;
-    height: 39px;
+    left: -0.7vw;
+    width: 0.7vw;
+    max-width: 4px;
+    height: calc(79vh / 18);
+    max-height: 45px;
   }
 
   .volume-down-button {
-    left: -2px;
-    top: calc(20% + 45px);
-    width: 2px;
-    height: 39px;
+    left: -0.7vw;
+    top: calc(15% + (75vh / 16));
+    width: 0.7vw;
+    max-width: 4px;
+    height: calc(79vh / 18);
+    max-height: 45px;
   }
 
   .slideshow-controls {
-    max-width: 280px;
-    margin-top: 0.8rem;
+    max-width: calc((75vh / 2.1667) + 60px);
+    margin-top: 2.5rem;
     padding: 0 0.5rem;
   }
 
   .slideshow-controls button {
-    padding: 0.6rem;
-    font-size: 1.2rem;
+    padding: 0.7rem;
+    font-size: 1.1rem;
   }
 
   .slideshow-dots {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
+    gap: 0.4rem;
+  }
+
+  .slideshow-dots .dot {
+    width: 10px;
+    height: 10px;
   }
 
   .cta {
@@ -849,6 +931,7 @@ footer {
 
   .slideshow-section h2 {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .slideshow-container {
@@ -856,52 +939,73 @@ footer {
   }
 
   .slideshow {
-    max-width: 240px;
+    width: calc(70vh / 2.1667);
+    height: 70vh;
+    max-width: 300px;
+    max-height: 560px;
   }
 
   .phone-frame {
     padding: 8px;
-    border-radius: 32px;
+    border-radius: 36px;
+  }
+
+  .phone-screen {
+    border-radius: 28px;
   }
 
   .phone-notch {
-    width: 80px;
-    height: 14px;
+    width: calc(70vh / 6.5);
+    max-width: 100px;
+    height: calc(70vh / 35);
+    max-height: 18px;
+    top: 9.5px;
   }
 
   .power-button {
-    right: -2px;
-    width: 2px;
-    height: 43px;
+    right: -0.6vw;
+    width: 0.8vw;
+    max-width: 3px;
+    height: calc(76vh / 14);
+    max-height: 55px;
   }
 
   .volume-up-button {
-    left: -2px;
-    top: 20%;
-    width: 2px;
-    height: 38px;
+    left: -0.6vw;
+    width: 0.8vw;
+    max-width: 3px;
+    height: calc(75vh / 18);
+    max-height: 30px;
   }
 
   .volume-down-button {
-    left: -2px;
-    top: calc(20% + 48px);
-    width: 2px;
-    height: 38px;
+    left: -0.6vw;
+    top: calc(15% + (70vh / 16));
+    width: 0.8vw;
+    max-width: 3px;
+    height: calc(75vh / 18);
+    max-height: 30px;
   }
 
   .slideshow-controls {
-    max-width: 240px;
+    max-width: calc((70vh / 2.1667) + 50px);
+    margin-top: 2.2rem;
     padding: 0 0.5rem;
-    margin-top: 0.6rem;
   }
 
   .slideshow-controls button {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.6rem;
+    font-size: 1rem;
   }
 
   .slideshow-dots {
-    margin-top: 0.6rem;
+    margin-top: 1rem;
+    gap: 0.3rem;
+  }
+
+  .slideshow-dots .dot {
+    width: 9px;
+    height: 9px;
   }
 
   .cta h2 {
