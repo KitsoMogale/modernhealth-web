@@ -1,14 +1,59 @@
 /* index.css — global styles and resets */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap');
+
 :root {
-  --font-primary: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --color-primary: #2563eb; /* blue-600 */
-  --color-secondary: #4f46e5; /* indigo-600 */
+  /* Modern Font Stack */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', 'Inter', sans-serif;
+
+  /* Enhanced Color Palette - Fresh Green */
+  --color-primary: #258d56; /* fresh green */
+  --color-primary-dark: #1a6b40; /* deeper green */
+  --color-primary-light: #2db96f; /* bright green */
+
+  --color-secondary: #ff6b6b; /* coral red for contrast */
+  --color-secondary-dark: #ee5a52; /* deeper coral */
+  --color-secondary-light: #ff8787; /* light coral */
+
+  --color-accent: #f59e0b; /* orange accent */
+  --color-accent-dark: #d97706; /* deeper orange */
+
   --color-light: #ffffff;
   --color-dark: #1a1a1a;
   --color-gray: #f3f4f6;
-  --text-main: #213547;
-  --text-secondary: #4b5563;
+  --color-gray-100: #f9fafb;
+  --color-gray-200: #e5e7eb;
+  --color-gray-800: #1f2937;
+
+  --text-main: #1f2937;
+  --text-secondary: #6b7280;
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, #2db96f 0%, #258d56 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  --gradient-hero: linear-gradient(135deg, #3dd17e 0%, #258d56 50%, #1a6b40 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-colored: 0 10px 30px rgba(37, 141, 86, 0.3);
+
+  /* Border Radius - More Playful */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   font-family: var(--font-primary);
   font-weight: 400;
@@ -47,27 +92,54 @@ img {
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color var(--transition-base), transform var(--transition-fast);
+  display: inline-block;
 }
 
 a:hover {
-  color: #1749db;
+  color: var(--color-primary-dark);
+  transform: translateY(-1px);
 }
 
 button {
   font-family: inherit;
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
   color: white;
   font-size: 1rem;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75em 1.5em;
+  border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
 }
 
 button:hover {
-  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl), var(--shadow-colored);
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {

@@ -52,14 +52,19 @@ function Home() {
   return (
     <main>
       <header className="hero" aria-label="ModernHealth introduction">
+        <h1 className="hero-title">ModernHealth</h1>
+        <h2 className="hero-subtitle">You are what you eat, ModernHealth helps you understand it.</h2>
+          
+        <div className="hero-banner-bg">
+          <img src="/banner.jpg" alt="ModernHealth Banner - You Are What You Eat" className="hero-banner" />
+        </div>
+        
         <div className="hero-overlay"></div>
+        <img src="/mascot.png" alt="ModernHealth Mascot" className="hero-mascot" />
         <div className="hero-content">
-          <h1 className="hero-title">ModernHealth</h1>
-          <h2 className="hero-subtitle">You Are What You Eat</h2>
-          <p className="hero-description">
-            Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.
-          </p>
-          <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" className="cta-button" aria-label="Download ModernHealth app">
+          <h2 className="hero-subtitle">Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.</h2>
+          
+        <a href="https://play.google.com/store/apps/details?id=com.kitso.ModernHealth" className="cta-button" aria-label="Download ModernHealth app">
             Download
           </a>
         </div>
@@ -130,11 +135,12 @@ function Home() {
       </section>
 
       <section className="cta">
+        <img src="/mascot.png" alt="ModernHealth Mascot" className="cta-mascot" />
         <h2>Transform Your Health Today</h2>
         <p>
-          Understand what you eat, nourish your body, and thrive with ModernHealth’s AI-driven tools.
+          Understand what you eat, nourish your body, and thrive with ModernHealth's AI-driven tools.
         </p>
-        <a href="https://drive.google.com/file/d/1Go8N307BBLxFHYQ7Dw21R4tN7zs1qfy5/view" className="cta-button">
+        <a href="https://play.google.com/store/apps/details?id=com.kitso.ModernHealth" className="cta-button">
           Get Started
         </a>
       </section>
