@@ -53,7 +53,8 @@ function Home() {
     <main>
       <header className="hero" aria-label="ModernHealth introduction">
         <h1 className="hero-title">ModernHealth</h1>
-        <h2 className="hero-subtitle">You are what you eat, ModernHealth helps you understand it.</h2>
+        <h2 className="hero-subtitle">You are what you eat.</h2>
+          <h2 className="hero-subtitle"> ModernHealth helps you understand it.</h2>
           
         <div className="hero-banner-bg">
           <img src="/banner.jpg" alt="ModernHealth Banner - You Are What You Eat" className="hero-banner" />
