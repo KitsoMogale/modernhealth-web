@@ -82,7 +82,6 @@ function PrivacyPolicy() {
   return (
     <main className="privacy-policy">
       <div className="privacy-policy-container">
-        <h1>Privacy Policy</h1>
         <article>
           <ReactMarkdown>{privacyPolicyContent}</ReactMarkdown>
         </article>
