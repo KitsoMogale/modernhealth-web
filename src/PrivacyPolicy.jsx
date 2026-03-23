@@ -6,74 +6,124 @@ import './App.css';
 const privacyPolicyContent = `
 # Privacy Policy for ModernHealth App
 
-**Last Updated: July 21, 2025**
+**Last Updated: March 23, 2026**
 
-ModernHealth ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the ModernHealth mobile application ("App"). The App provides educational content about nutrition and the human body, along with subscription-based features to enhance your health journey( e.g nutrition tracking and meal recommendations). By using the App, you agree to the practices described in this policy.
+ModernHealth (“we,” “us,” or “our”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the ModernHealth mobile application (“App”). By using the App, you agree to the practices described in this policy.
 
 ## 1. Information We Collect
 
-We collect the following types of information to provide and improve our services:
+### a. Account Information
+When you create an account, we collect:
 
-### a. Information You Provide
-- **Account Information**: When you create a profile or subscribe, we collect your email address and subscription status (e.g., whether you have an active subscription). This is stored in our database and used for account management and payment processing.
-- **Payment Information**: If you choose to subscribe (e.g., for $6/month), we collect payment details through our third-party payment processor (PayPal). We do not store your credit card or payment information directly on our servers.
+- Email and password (for email-based registration)
+- Name, age, gender, height, weight, and health goal (provided during registration)
+- Dietary preferences (e.g., vegan, keto, gluten-free)
+- Preferred measurement units (metric or imperial)
 
-### b. Information Not Collected
-- The App does not collect sensitive personal information like your address, or health data unless explicitly provided by you (e.g., email for subscriptions).
-- Educational screens (e.g., Nutrition Education, Human Body Education) do not collect personal data beyond usage analytics.
+If you sign in with Google Sign-In or Apple Sign-In, we receive your name and email address from those services. We do not receive or store your Google or Apple password.
+
+### b. Meal and Nutrition Data
+
+- **Food logs**: Meals you log manually, including meal descriptions and nutrient data
+- **AI-analyzed nutrition data**: When you log a meal, our AI analyzes it to provide calorie, macro, and micronutrient breakdowns. This data is stored on our servers linked to your account.
+- **Meal suggestions**: We generate personalized meal suggestions based on your health goal and dietary preferences.
+
+### c. Learning and Progress Data
+
+- **Quiz scores and lesson progress**: Results from nutrition quizzes, content quizzes, and lesson completion status
+- **Nutrition knowledge level**: Your learning level (e.g., noobie, intermediate, expert) calculated from quiz performance, engagement, and behavioral data
+- **Badges and achievements**: Earned through learning milestones and consistent app usage
+- **Daily streaks**: Tracking consecutive days of app engagement
+
+### d. Notes
+
+- **Quick notes and health journal entries**: Personal notes you create within the App are stored on your device and our servers.
+
+### e. Payment Information
+
+If you subscribe to Premium, payment is processed through Google Play Billing (Android) or Apple In-App Purchases (iOS). We receive transaction receipts to verify your subscription status. We do not store your credit card or payment details.
+
+### f. Device and Usage Data
+
+- Device type, operating system, and app version for compatibility and performance
+- We do not use third-party analytics tracking tools
 
 ## 2. How We Use Your Information
 
-We use your information to provide, maintain, and improve the App’s functionality:
+- **Account management**: To create and maintain your account, authenticate your identity, and manage your profile
+- **Nutrition tracking**: To log meals, analyze nutrients using AI (powered by DeepSeek), and display health insights including effects on organs and nutrient sources
+- **Personalized recommendations**: To generate meal suggestions and cooking ideas tailored to your goals and dietary preferences
+- **Education**: To deliver nutrition lessons, quizzes, and track your learning progress
+- **Achievements and motivation**: To calculate streaks, badges, and knowledge levels that encourage healthy habits
+- **Subscription management**: To verify your Premium subscription status and provide access to premium features
+- **Communication**: To send transactional messages such as subscription confirmations (via email, if applicable)
 
-- **Account and Subscription Management**: Your email and subscription status are used to manage your account, verify subscription status, and provide access to premium features (e.g., advanced educational content).
-- **Payment Processing**: Payment details are used to process your subscription through PayPal, ensuring secure transactions and verifying payment completion.
-- **App Improvement**: Usage and device data help us analyze how the App is used, troubleshoot issues, and enhance features like navigation and content delivery.
-- **Personalization**: We may use usage data to tailor educational content recommendations (e.g., suggesting relevant nutrition or human body topics).
-- **Communication**: Your email may be used to send transactional messages, such as payment confirmations or subscription updates.
+## 3. AI-Powered Features
 
-## 3. How We Share Your Information
+ModernHealth uses AI (DeepSeek) to:
 
-We only share your information as necessary to provide our services or comply with legal obligations:
+- Analyze meals and provide detailed nutrient breakdowns
+- Generate insights about health effects, impacted organs, and food sources for each nutrient
+- Create personalized meal and cooking suggestions
+- Generate quiz questions based on your meals
+- Answer nutrition and recipe-related questions via the Ask AI feature
 
-- **Third-Party Service Providers**:
-  - **Payment Processor (PayPal)**: We share your email and payment details with PayPal to process subscription payments securely. PayPal’s privacy practices are governed by their own [Privacy Policy](https://www.paypal.com/us/webapps/mpp/ua/privacy-full).
-  - **Analytics Providers**: We may use third-party analytics tools (e.g., Google Analytics) to collect and analyze non-personal usage data. These providers receive anonymized data to help us understand App performance.
-- **Legal Compliance**: We may disclose your information if required by law, such as in response to a court order or regulatory request.
-- **No Unnecessary Sharing**: We do not sell, trade, or share your personal information with third parties for marketing purposes or any purpose beyond what is necessary for App functionality.
+Meal data you submit is sent to our backend server, which communicates with the AI service. AI responses are stored with your food logs for future reference.
 
-## 4. Data Storage and Security
+## 4. How We Share Your Information
 
-- **Storage**: Your email and subscription status are stored in a MongoDB. Payment details are handled by PayPal and not stored by us.
-- **Retention**: We retain your data only as long as necessary to provide services or comply with legal requirements. You can request data deletion (see Section 6).
+- **AI Service Provider (DeepSeek)**: Meal descriptions and related data are sent to DeepSeek’s API for nutrition analysis. This data is used solely for generating responses and is subject to DeepSeek’s privacy policy.
+- **Payment Processors**: Google Play or Apple receives payment-related data to process subscriptions. We only receive verification receipts.
+- **Firebase Authentication**: Google Firebase handles authentication for Google and Apple sign-in. Firebase receives your authentication credentials as described in Google’s privacy policy.
+- **Legal compliance**: We may disclose information if required by law.
+- **No selling of data**: We do not sell, trade, or share your personal information with third parties for marketing purposes.
 
-## 5. Your Choices and Rights
+## 5. Data Storage and Security
 
-You have control over your information:
-- **Access and Update**: You can view or update your health goals, current metrics(e.g age, weight) and subscription status in the App’s profile settings.
-- **Data Deletion**: To delete your account data, visit our website at [Account Deletion](https://modernhealth-web.netlify.app). We will remove your email and subscription data from our systems, except where required by law.
-- **Subscription Cancellation**: The app does not automatically have automatically recurring subscription payments.
+- **Backend server**: Your account data, food logs, nutrition knowledge, notes, and subscription status are stored on our servers (hosted on Render).
+- **Local storage**: Some data (authentication tokens, user preferences, theme settings) is cached locally on your device using AsyncStorage.
+- **Security**: We use JWT-based authentication, HTTPS encryption for all data transmission, and secure password hashing. However, no system is completely secure.
+- **Retention**: We retain your data as long as your account is active. You can request deletion at any time (see Section 6).
 
-## 6. Children’s Privacy
+## 6. Your Rights and Choices
 
-The App is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will delete it promptly. Contact us at support@modernhealth.com if you believe we have collected data from a child under 13.
+- **Access and update**: You can view and update your profile information (dietary preferences, health goal, weight, units) in the App’s Profile screen.
+- **Delete account**: You can permanently delete your account and all associated data through the Profile screen’s “Delete Account” option. This action is irreversible.
+- **Subscription cancellation**: Cancel your Premium subscription through Google Play or Apple Settings. This stops future charges but does not delete your account data.
+- **Theme preferences**: You can switch between dark and light mode at any time.
 
-## 7. Third-Party Links
+## 7. Children’s Privacy
 
-The App may contain links to third-party websites or services (e.g., PayPal for payments). We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing information.
+The App is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such data, we will delete it promptly. Contact us at modernhealth84@gmail.com if you believe a child’s data has been collected.
 
-## 8. International Data Transfers
+## 8. Third-Party Services
 
-The App is operated in South Africa, but your data may be processed in other countries by our third-party providers (e.g., PayPal). We ensure these providers comply with applicable privacy laws, such as GDPR or CCPA, where relevant.
+The App integrates with the following third-party services, each governed by their own privacy policies:
 
-## 9. Changes to This Privacy Policy
+- Firebase (Google) — Authentication
+- Google Sign-In — Account creation and login
+- Apple Sign-In — Account creation and login
+- Google Play Billing / Apple In-App Purchases — Subscription payments
+- DeepSeek AI — Meal analysis and nutrition insights
+- Render — Backend server hosting
 
-We may update this Privacy Policy to reflect changes in our practices or legal requirements. The updated policy will be posted in the App, with the “Last Updated” date revised. Continued use of the App after changes constitutes acceptance of the new policy.
+## 9. Permissions
 
-## 10. Contact Us
+The App may request the following device permissions:
 
-If you have questions, concerns, or requests regarding your privacy or this policy, contact us at:
-- **Email**: support@modernhealth.com
+- Billing (Android) — Required for in-app subscription purchases
+- Audio recording — Used for voice-related features within the app
+- Camera and Photo Library (iOS) — For meal photo capture and analysis
+
+## 10. Changes to This Privacy Policy
+
+We may update this Privacy Policy to reflect changes in our practices or legal requirements. The updated policy will be posted in the App and on our store listing, with the “Last Updated” date revised. Continued use of the App after changes constitutes acceptance of the updated policy.
+
+## 11. Contact Us
+
+If you have questions, concerns, or requests regarding your privacy, contact us at:
+
+- **Email**: modernhealth84@gmail.com
 
 By using the ModernHealth App, you acknowledge that you have read and understood this Privacy Policy.
 `;
