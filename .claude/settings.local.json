@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /c/Users/kitso/Downloads/modernhealth-web/public/*.webp /c/Users/kitso/Downloads/modernhealth-web/public/*.jpg /c/Users/kitso/Downloads/modernhealth-web/public/*.png)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
