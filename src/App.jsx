@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Home';
 import PrivacyPolicy from './PrivacyPolicy';
 import DeleteAccountModal from './DeleteAccountModal';
+import TermsOfUse from './TermsOfUse';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,11 +18,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
         </Routes>
         <footer>
           <p>© 2025 ModernHealth. All rights reserved.</p>
           <div className="footer-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-use">Terms of Use</Link>
             <a href="mailto:modernhealth84@gmail.com">Contact Us</a>
             <button onClick={openModal} className="footer-link-button" aria-label="Delete Account">
               Delete Account
