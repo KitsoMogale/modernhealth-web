@@ -69,11 +69,11 @@ function Home() {
             Track your diet and learn how food shapes your body with AI-powered insights and personalized nutrition plans.
           </p>
           <div className="hero-actions">
-            <a href="https://play.google.com/store/apps/details?id=com.kitso.ModernHealth" className="cta-button" aria-label="Download ModernHealth app">
-              <i className="fab fa-google-play"></i> Get it on Google Play
+            <a href="https://play.google.com/store/apps/details?id=com.kitso.ModernHealth" className="cta-button" aria-label="Download ModernHealth on Google Play">
+              <i className="fab fa-google-play"></i> Google Play
             </a>
-            <a href="#features" className="cta-button-secondary" aria-label="Learn more about features">
-              Learn More
+            <a href="https://apps.apple.com/us/app/modernhealth-ai/id6752220370" className="cta-button" aria-label="Download ModernHealth on App Store">
+              <i className="fab fa-apple"></i> App Store
             </a>
           </div>
           <div className="hero-stats">
@@ -229,7 +229,10 @@ function Home() {
             </p>
             <div className="cta-actions">
               <a href="https://play.google.com/store/apps/details?id=com.kitso.ModernHealth" className="cta-button">
-                <i className="fab fa-google-play"></i> Download Free
+                <i className="fab fa-google-play"></i> Google Play
+              </a>
+              <a href="https://apps.apple.com/us/app/modernhealth-ai/id6752220370" className="cta-button">
+                <i className="fab fa-apple"></i> App Store
               </a>
             </div>
             <div className="cta-perks">
